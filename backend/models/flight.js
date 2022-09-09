@@ -13,6 +13,10 @@ const flightSchema = new Schema({
     destination: {
         type: String,
         required: true
+    },
+    userId: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
     }
 }, {timestamps: true})
 
