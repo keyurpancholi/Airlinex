@@ -17,16 +17,16 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use((req, res, next) => {
-  User.findById("631744228f28a9608b16eaf8")
-    .then(user => {
-      req.user = user
-      next()
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
+// app.use((req, res, next) => {
+//   User.findById("631744228f28a9608b16eaf8")
+//     .then(user => {
+//       req.user = user
+//       next()
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// });
 
 app.use("/admin", adminRoutes);
 app.use(userRoutes);

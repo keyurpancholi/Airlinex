@@ -19,3 +19,7 @@ exports.addFlight = (req, res, next) => {
     console.log(err)
   })
 };
+
+exports.removeFlight = (req, res, next) => {
+  
+}
