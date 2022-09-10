@@ -17,6 +17,13 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use((err, req, res, next) => {
+  console.log(err)
+  const status = err.statusCode || 500
+  const message = err.message || 'Error found'
+  res.status(status).json({message: message})
+})
+
 // app.use((req, res, next) => {
 //   User.findById("631744228f28a9608b16eaf8")
 //     .then(user => {

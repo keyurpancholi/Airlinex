@@ -5,7 +5,7 @@ const Flight = require("../models/flight");
 exports.getFlights = (req, res, next) => {
   Flight.find()
     .then((flights) => {
-      if(!flight){
+      if(!flights){
         const error = new Error('No flights found')
         error.statusCode = 404
         throw error

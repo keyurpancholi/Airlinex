@@ -8,6 +8,6 @@ const router = express.Router()
 // POST ROUTES
 router.post('/addFlight', adminController.addFlight)
 
-router.delete('/deleteFlighy/:flightId')
+router.delete('/deleteFlight/:flightId', adminController.removeFlight)
 
 module.exports = router
