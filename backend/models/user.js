@@ -11,19 +11,15 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    password: {
+      type: String,
+      required: true
+    },
     contact: {
       type: Number,
       required: true,
     },
-    bookings: {
-      flights: [
-        {
-          flightId: { type: Schema.Types.ObjectId, required: true },
-          flightNumber: String,
-          quantity: {type: Number, required: true}
-        },
-      ],
-    },
+    flights: [{ type: Schema.Types.ObjectId, ref: "Flight" }],
   },
   { timestamps: true }
 );
