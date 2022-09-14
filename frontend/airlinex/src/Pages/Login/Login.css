@@ -1,0 +1,12 @@
+.container {
+    color: #fff;
+}
+
+.login-heading {
+    text-align: center;
+}
+
+.form-div {
+    border-radius: 3rem;
+    background-image: linear-gradient(to bottom right, #00A3FF, #8fccf0 70%);
+}
