@@ -1,11 +1,13 @@
-import Sidebar from "../../Components/Sidebar/Sidebar"
-import "./HomePage.css"
+import Navbar from "../../Components/Navbar/navbar";
+import "./HomePage.css";
 
 const HomePage = () => {
-    return (<>
-        <Sidebar><h1>Home page</h1></Sidebar>
-        </>
-    )
-}
+  return (
+    <>
+      <Navbar />
+      <h1>Home page</h1>
+    </>
+  );
+};
 
-export default HomePage
+export default HomePage;

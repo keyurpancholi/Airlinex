@@ -1,13 +1,14 @@
-import "./Webcheckin.css"
-import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
-import Sidebar from "../../Components/Sidebar/Sidebar"
+import "./Webcheckin.css";
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "../../Components/Navbar/navbar";
 
 const Webcheckin = () => {
-    return (
-        <Sidebar>
-            <h1>Web check in</h1>
-        </Sidebar>
-    )
-}
+  return (
+    <>
+      <Navbar />
+      <h1>Web checkin</h1>
+    </>
+  );
+};
 
-export default Webcheckin
+export default Webcheckin;

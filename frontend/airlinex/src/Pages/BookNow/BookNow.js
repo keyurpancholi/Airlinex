@@ -1,13 +1,14 @@
-import './BookNow.css'
-import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import Sidebar from '../../Components/Sidebar/Sidebar'
+import "./BookNow.css";
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "../../Components/Navbar/navbar";
 
 const BookNow = () => {
-    return (
-        <Sidebar>
-            <h1>Book Now</h1>
-        </Sidebar>
-    )
-}
+  return (
+    <>
+      <Navbar />
+      <h1>Book now</h1>
+    </>
+  );
+};
 
-export default BookNow
+export default BookNow;

@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+.navbar {
+    background-color: #e3f2fd;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+}
+
+.navbar ul li:hover {
+    transform: translateY(-1px);
+    border-bottom: solid #000;
+}
