@@ -6,6 +6,10 @@
     font-size: 1.2rem;
 }
 
+.navbar ul li {
+    transition: all ease-in-out;
+}
+
 .navbar ul li:hover {
     transform: translateY(-1px);
     border-bottom: solid #000;
