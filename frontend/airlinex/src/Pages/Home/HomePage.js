@@ -1,11 +1,27 @@
 import Navbar from "../../Components/Navbar/navbar";
 import "./HomePage.css";
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
     <>
       <Navbar />
-      <h1>Home page</h1>
+      <div className="home-container">
+        <div className="home-row-1">
+          <div className="home-content">
+            <h1>
+              We are <span>Airlinex</span>
+            </h1>
+          </div>
+          <div className="home-lottie">Lottie file goes here</div>
+        </div>
+        <div className="home-row-2">
+          <Link to="/booknow">
+            <button className="btn btn-primary">Book Now</button>
+          </Link>
+        </div>
+      </div>
     </>
   );
 };
