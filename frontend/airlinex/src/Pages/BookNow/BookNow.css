@@ -22,3 +22,20 @@ label {
     margin: 10px;
     padding: 10px;
 }
+
+.tripInputLabelRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+svg {
+    width: 25px;
+    height: 25px;
+    /* margin: 5px; */
+}
+
+label {
+    padding: 10px;
+}

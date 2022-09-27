@@ -20,16 +20,24 @@ const Dropdown = (props) => {
   };
 
   return (
-    <div class="dropdown">
-      <button onClick={dropController} className="dropbtn">
-        {props.children}
-      </button>
-      <div id="myDropdown" className="dropdown-content">
-        {props.options.map((item) => (
-          <a href="#">{item}</a>
-        ))}
-      </div>
-    </div>
+    // <div class="dropdown">
+    //   <button onClick={dropController} className="dropbtn">
+    //     {props.children}
+    //   </button>
+    //   <div id="myDropdown" className="dropdown-content">
+    //     {props.options.map((item) => (
+    //       <a href="#">{item}</a>
+    //     ))}
+    //   </div>
+    // </div>
+
+    <select name="myOptions" id="myOptions">
+      <option value="" selected disabled hidden>Select choice</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Delhi">Delhi</option>
+      <option value="New York">New York</option>
+      <option value="Boston">Boston</option>
+    </select>
   );
 };
 

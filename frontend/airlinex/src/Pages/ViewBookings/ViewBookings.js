@@ -1,12 +1,13 @@
 import "./ViewBookings.css";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Sidebar from "../../Components/Sidebar/Sidebar";
+import Navbar from "../../Components/Navbar/navbar";
 
 const ViewBookings = () => {
   return (
-    <Sidebar>
+    <>
+      <Navbar />
       <h1>View Bookings</h1>
-    </Sidebar>
+    </>
   );
 };
 
