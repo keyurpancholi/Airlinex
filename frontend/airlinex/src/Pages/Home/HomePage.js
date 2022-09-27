@@ -11,7 +11,7 @@ const HomePage = () => {
         <div className="home-row-1">
           <div className="home-content">
             <h1>
-              We are <span>Airlinex</span>
+              With Airlinex, <span>it's more than</span> just a trip
             </h1>
           </div>
           <div className="home-lottie">Lottie file goes here</div>
