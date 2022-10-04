@@ -12,10 +12,15 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.1",
     "react": "^18.2.0",
+    "react-accessible-accordion": "^5.0.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+<<<<<<< HEAD
     "styled-components": "^5.3.6",
+=======
+    "react-select-async-paginate": "^0.6.2",
+>>>>>>> sakshi
     "web-vitals": "^2.1.4"
   },
   "scripts": {

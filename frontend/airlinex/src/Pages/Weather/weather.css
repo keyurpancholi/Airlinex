@@ -1,0 +1,13 @@
+.searchbox{
+    width: 100%;
+    max-width: 1080px;
+    margin: 30px auto;
+}
+.weather-bg{
+    /* background-color: #d5d4d4; */
+    margin: 0;
+  font-family: "Roboto", Arial, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
