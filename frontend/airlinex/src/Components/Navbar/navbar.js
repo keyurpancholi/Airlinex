@@ -37,6 +37,9 @@ const Navbar = () => {
                     <Link className="nav-link" to="/webcheckin">Web Checkin</Link>
                   </li>
                   <li className="nav-item px-1">
+                    <Link className="nav-link" to="/weather">Weather</Link>
+                  </li>
+                  <li className="nav-item px-1">
                     <Link className="nav-link" to="/">Contact</Link>
                   </li>
                 </ul>

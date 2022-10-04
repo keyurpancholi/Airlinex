@@ -6,6 +6,7 @@ import SignUpPage from "./Pages/SignUp/Signup";
 import BookNow from "./Pages/BookNow/BookNow";
 import ViewBookings from "./Pages/ViewBookings/ViewBookings"
 import Webcheckin from "./Pages/Webcheckin/Webcheckin";
+import Weather from "./Pages/Weather/weather";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path="/booknow" element={<BookNow/>} />
       <Route path="/viewbookings" element={<ViewBookings/>} />
       <Route path="/webcheckin" element={<Webcheckin/>} />
+      <Route path="/weather" element={<Weather/>} />
     </Routes>
   );
 }
