@@ -22,19 +22,19 @@
 } */
 
 .home-row-1 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-content {
-    margin: 0 auto;
+  margin: 0 auto;
   animation: homeContent 0.5s forwards;
 }
 
 .home-lottie {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .home-content span {
@@ -53,9 +53,9 @@
 }
 
 .home-row-2 {
-    margin: 0 auto;
-    padding: 1rem;
-    animation: homebuttonannimation 0.5s forwards;
+  margin: 0 auto;
+  padding: 1rem;
+  animation: homebuttonannimation 0.5s forwards;
 }
 
 @keyframes homebuttonannimation {
