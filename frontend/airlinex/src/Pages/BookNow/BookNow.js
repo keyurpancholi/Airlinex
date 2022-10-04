@@ -4,6 +4,7 @@ import Card from "../../Components/Card/Card";
 import Dropdown from "./Dropdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar from "../../Components/Navbar/navbar";
+import Footer from "../../Components/Footer/Footer"
 
 const BookNow = () => {
   const fromOptions = ["Mumbai", "Delhi", "New York", "Boston"];
@@ -80,6 +81,7 @@ const BookNow = () => {
           </div>
         </div>
       </Card>
+      <Footer />
     </>
   );
 };

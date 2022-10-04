@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
 .navbar {
-    background-color: #e3f2fd;
+    background-color: #fff;
     font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
 }
@@ -14,3 +14,5 @@
     transform: translateY(-1px);
     border-bottom: solid #000;
 }
+
+/* primary-color: #e3f2fd */
