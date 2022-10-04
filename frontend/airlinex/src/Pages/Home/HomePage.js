@@ -2,6 +2,7 @@ import Navbar from "../../Components/Navbar/navbar";
 import "./HomePage.css";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
+import Footer from "../../Components/Footer/Footer"
 
 const HomePage = () => {
   return (
@@ -22,6 +23,7 @@ const HomePage = () => {
           </Link>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
