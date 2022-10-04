@@ -1,0 +1,14 @@
+.card {
+    width: auto;
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 16px;
+    padding: 1rem 2rem;
+    box-shadow:  1px 2px 8px gray;
+    background-color: #FFF;
+    margin: 20px;
+    background-image: linear-gradient(violet, white);
+    /* border: solid 2px #000; */
+}

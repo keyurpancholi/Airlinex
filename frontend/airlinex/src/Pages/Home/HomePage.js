@@ -1,28 +1,33 @@
 import Navbar from "../../Components/Navbar/navbar";
 import "./HomePage.css";
+import Lottie from "react-lottie";
+import animation from "../../assets/lottie/homepage-animation.json";
+import Features from "./Features";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer"
 
 const HomePage = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animation,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   return (
     <>
       <Navbar />
-      <div className="home-container">
-        <div className="home-row-1">
-          <div className="home-content">
-            <h1>
-              With Airlinex, <span>it's more than</span> just a trip
-            </h1>
-          </div>
-          <div className="home-lottie">Lottie file goes here</div>
+      <main>
+        <div className="home-lottie">
+          <Lottie options={defaultOptions}></Lottie>
         </div>
-        <div className="home-row-2">
-          <Link to="/booknow">
-            <button className="btn btn-primary">Book Now</button>
-          </Link>
+        <div className="home-salient">
+          <Features></Features>
         </div>
-      </div>
+      </main>
       <Footer />
     </>
   );
