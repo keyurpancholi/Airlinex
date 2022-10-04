@@ -4,7 +4,6 @@ import Lottie from "react-lottie";
 import animation from "../../assets/lottie/homepage-animation.json";
 import Features from "./Features";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer"
 
 const HomePage = () => {
