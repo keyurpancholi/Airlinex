@@ -8,8 +8,8 @@ import CurrentWeather from "../../Components/current-weather/current-weather";
 import { WEATHER_API_KEY, WEATHER_API_URL } from "../../api";
 
 function Weather() {
-  const[currentWeather, setCurrentWeather] = useState(null);
-  const[forcast, setForcast] = useState(null);
+  const[currentWeather, setCurrentWeather] = useState();
+  const[forcast, setForcast] = useState();
 
 
   const handleOnSearchChange = (searchData) => {
