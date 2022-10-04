@@ -1,7 +1,9 @@
 import "./ViewBookings.css";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "../../Components/Navbar/navbar";
-import Footer from "../../Components/Footer/Footer"
+import Footer from "../../Components/Footer/Footer";
+import React from "react";
+
 
 const ViewBookings = () => {
   return (

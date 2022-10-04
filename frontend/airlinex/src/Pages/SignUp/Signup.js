@@ -1,6 +1,8 @@
+import React from "react";
 import {Link} from "react-router-dom"
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import "./Signup.css"
+
 
 const SignUpPage = () => {
   return (
