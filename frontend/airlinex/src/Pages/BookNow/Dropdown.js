@@ -33,10 +33,11 @@ const Dropdown = (props) => {
 
     <select name="myOptions" id="myOptions">
       <option value="" selected disabled hidden>Select choice</option>
-      <option value="Mumbai">Mumbai</option>
+      {props.options.map((item) => <option value={item}>{item}</option>)}
+      {/* <option value="Mumbai">Mumbai</option>
       <option value="Delhi">Delhi</option>
       <option value="New York">New York</option>
-      <option value="Boston">Boston</option>
+      <option value="Boston">Boston</option> */}
     </select>
   );
 };

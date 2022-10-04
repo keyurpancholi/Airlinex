@@ -39,3 +39,19 @@ svg {
 label {
     padding: 10px;
 }
+
+.searchIcon {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+}
+
+.tripInputIntermediate {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex: 3;
+}

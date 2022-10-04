@@ -1,0 +1,30 @@
+.featureLayout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.featureCard {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 33%;
+    height: 100%;
+}
+
+.featureCardRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.featureSVG{
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #6E7491;
+    border-radius: 30px;
+    padding: 10px;
+    /* margin: 5px; */
+}

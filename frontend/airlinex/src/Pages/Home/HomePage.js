@@ -2,6 +2,7 @@ import Navbar from "../../Components/Navbar/navbar";
 import "./HomePage.css";
 import Lottie from "react-lottie";
 import animation from "../../assets/lottie/homepage-animation.json";
+import Features from "./Features";
 
 const HomePage = () => {
   const defaultOptions = {
@@ -16,10 +17,14 @@ const HomePage = () => {
   return (
     <>
       <Navbar />
-      <div className="lottie">
-        <Lottie options={defaultOptions}></Lottie>
-      </div>
-        <h1>Home page</h1>
+      <main>
+        <div className="home-lottie">
+          <Lottie options={defaultOptions}></Lottie>
+        </div>
+        <div className="home-salient">
+          <Features></Features>
+        </div>
+      </main>
     </>
   );
 };
