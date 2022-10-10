@@ -33,8 +33,10 @@ export default function SignInSide() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
+      username: data.get('username'),
       email: data.get('email'),
       password: data.get('password'),
+      contact: data.get('contact'),
     });
   };
 
@@ -73,6 +75,16 @@ export default function SignInSide() {
               Sign in
             </Typography>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+            <TextField
+                margin="normal"
+                required
+                fullWidth
+                id="username"
+                label="Username"
+                name="username"
+                autoComplete="username"
+                autoFocus
+              />
               <TextField
                 margin="normal"
                 required
@@ -93,11 +105,17 @@ export default function SignInSide() {
                 id="password"
                 autoComplete="current-password"
               />
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                name="contact"
+                label="contact"
+                type="contact"
+                id="contact"
+                autoComplete="contact"
               />
-              <Link href="/"
+              <Link //href="/"
               component={Button}
                type="submit"
                fullWidth
