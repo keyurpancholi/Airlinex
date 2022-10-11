@@ -1,16 +1,16 @@
 import "./navbar.css";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import React from "react";
 
 const Navbar = (props) => {
-  const [isUser, setisUser] = useState(true);
+
   const navigate = useNavigate();
 
   const logoutHandler = () => {
-    setisUser(false);
     localStorage.removeItem("token");
     localStorage.removeItem("userId");
+    props.setIsLoggedOut()
   };
 
   return (
@@ -32,7 +32,7 @@ const Navbar = (props) => {
           <i className="fa-solid fa-bars-staggered navbar-toggler-icon"></i>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          {isUser ? (
+          {props.isLoggedIn ? (
             <ul className="navbar-nav mx-auto">
               <li className="nav-item px-1">
                 <Link className="nav-link active" aria-current="page" to="/">
@@ -93,7 +93,7 @@ const Navbar = (props) => {
             {/* <div className="text-lg-end">
                         <button className="btn btn-primary">Logout</button>
                     </div> */}
-            {!isUser ? (
+            {!props.isLoggedIn ? (
               <div className="text-lg-end">
                 <button
                   className="btn btn-primary"

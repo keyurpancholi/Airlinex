@@ -5,9 +5,9 @@ import Dropdown from "./Dropdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar from "../../Components/Navbar/navbar";
 import Footer from "../../Components/Footer/Footer";
-import { useState } from "react";
+import React,{ useState } from "react";
 
-const BookNow = () => {
+const BookNow = (props) => {
   const fromOptions = ["Mumbai", "Delhi", "New York", "Boston", "Dubai"];
   const toOptions = ["Andheri", "Delhi", "New York", "Boston", "DEL"];
 
@@ -64,7 +64,7 @@ const BookNow = () => {
 
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar isLoggedIn={props.isLoggedIn} setIsLoggedIn={props.setIsLoggedIn} setIsLoggedOut={props.setIsLoggedOut} ></Navbar>
       {isLoading && <p>Loading...</p>}
       {!isLoading && isFlights.length === 0 && (
         <Card>

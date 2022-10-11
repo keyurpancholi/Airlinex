@@ -5,8 +5,9 @@ import animation from "../../assets/lottie/homepage-animation.json";
 import Features from "./Features";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Footer from "../../Components/Footer/Footer"
+import React from "react";
 
-const HomePage = () => {
+const HomePage = (props) => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -16,9 +17,11 @@ const HomePage = () => {
     },
   };
 
+
+
   return (
     <>
-      <Navbar />
+      <Navbar isLoggedIn={props.isLoggedIn} setIsLoggedIn={props.setIsLoggedIn} setIsLoggedOut={props.setIsLoggedOut} />
       <main>
         <div className="home-lottie">
           <Lottie options={defaultOptions}></Lottie>

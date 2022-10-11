@@ -7,7 +7,7 @@ import Forcast from "../../Components/forcast/forcast";
 import CurrentWeather from "../../Components/current-weather/current-weather";
 import { WEATHER_API_KEY, WEATHER_API_URL } from "../../api";
 
-function Weather() {
+function Weather(props) {
   const[currentWeather, setCurrentWeather] = useState();
   const[forcast, setForcast] = useState();
 
@@ -34,7 +34,7 @@ function Weather() {
   console.log(forcast);
   return (
     <div className="weather-bg">
-      <Navbar />
+      <Navbar isLoggedIn={props.isLoggedIn} setIsLoggedIn={props.setIsLoggedIn} setIsLoggedOut={props.setIsLoggedOut} />
       <div className="searchbox">
       <Search onSearchChange={handleOnSearchChange} />
       </div>

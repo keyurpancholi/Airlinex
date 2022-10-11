@@ -101,7 +101,7 @@ export default function SignInSide() {
             <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
               <LockOutlinedIcon />
             </Avatar>
-            <Typography variant="h5">Sign in</Typography>
+            <Typography variant="h5">Sign Up</Typography>
             <Box
               component="form"
               noValidate
@@ -161,7 +161,7 @@ export default function SignInSide() {
               <Grid container>
                 <Grid item>
                   <Link href="/login" variant="body2">
-                    {"Have an account? login"}
+                    {"Have an account? Login"}
                   </Link>
                 </Grid>
               </Grid>
