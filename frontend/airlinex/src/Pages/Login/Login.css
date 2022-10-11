@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(../../assets/flight_login.jpg);
+    background-image: url(../../assets/images/carousel3.jpg);
     background-size: cover;
 }
 
@@ -96,6 +96,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    /* position: relative; */
 }
 
 .login-fa-item {
@@ -107,4 +108,5 @@
     display: grid;
     place-items: center;
     border-radius: 50%;
+    /* position: absolute; */
 }

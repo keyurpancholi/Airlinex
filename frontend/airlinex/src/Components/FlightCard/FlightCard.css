@@ -1,0 +1,22 @@
+.flightcard {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.flightcardrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.flightcardrowcol {
+    display: flex;
+    flex-direction: column;
+}
+
+svg {
+    height: 25px;
+    width: 25px;
+}

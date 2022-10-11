@@ -2,9 +2,12 @@ import { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./Login.css";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import {faGoogle, faFacebook, faGithub} from '@fortawesome/free-brands-svg-icons'
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGoogle,
+  faFacebook,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 
 const LoginPage = () => {
   const email = useRef();
@@ -47,22 +50,34 @@ const LoginPage = () => {
         <span className="login-seperator"></span>
 
         <div className="login-fa-icons">
-          <div className="login-fa-item">
-          <FontAwesomeIcon icon={faGoogle} color="white" height="10px"></FontAwesomeIcon>
+          {/* <div className="login-fa-item">
+            <FontAwesomeIcon
+              icon={faGoogle}
+              color="white"
+              height="10px"
+            ></FontAwesomeIcon>
           </div>
           <div className="login-fa-item">
             <FontAwesomeIcon icon={faFacebook} color="white"></FontAwesomeIcon>
           </div>
           <div className="login-fa-item">
             <FontAwesomeIcon icon={faGithub} color="white"></FontAwesomeIcon>
-          </div>
+          </div> */}
+          <FontAwesomeIcon
+            icon={faGoogle}
+            color="white"
+            height="10px"
+          ></FontAwesomeIcon>
+
+          <FontAwesomeIcon icon={faFacebook} color="white"></FontAwesomeIcon>
+
+          <FontAwesomeIcon icon={faGithub} color="white"></FontAwesomeIcon>
         </div>
 
         <div className="login-submit-container">
-        <button className="loginbtn" onClick={loginHandler}>
+          <button className="loginbtn" onClick={loginHandler}>
             Log in
-        </button>
-
+          </button>
         </div>
       </div>
     </div>
