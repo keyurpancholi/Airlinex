@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "../../Components/Navbar/navbar";
 import "./HomePage.css";
 import Lottie from "react-lottie";

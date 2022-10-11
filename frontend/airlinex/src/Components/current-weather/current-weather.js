@@ -1,3 +1,4 @@
+import React from "react";
 import "./current-weather.css";
 import React from "react";
 

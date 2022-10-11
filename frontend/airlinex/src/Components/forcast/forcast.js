@@ -1,3 +1,4 @@
+import React from "react";
 import { Accordion, AccordionItem, AccordionItemButton, AccordionItemHeading, AccordionItemPanel } from "react-accessible-accordion";
 import "./forcast.css";
 import React from "react";
