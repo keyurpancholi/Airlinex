@@ -60,9 +60,10 @@
 }
 
 .login-submit-container {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+    margin: 0 auto;
 }
 
 .loginbtn {
@@ -78,7 +79,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1.5rem;
+    margin: 1.5rem;
 }
 
 .loginbtn:hover {
@@ -98,7 +99,7 @@
     justify-content: space-evenly;
 }
 
-.login-fa-item {
+/* .login-fa-item {
     padding: 0.5rem;
     cursor: pointer;
     width: 2rem;
@@ -107,4 +108,4 @@
     display: grid;
     place-items: center;
     border-radius: 50%;
-}
+} */

@@ -2,9 +2,9 @@ const Flight = require("../models/flight");
 const User = require("../models/user");
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
+const jwt = require("jsonwebtoken");
 
 // GET Routes
-
 exports.getFlights = (req, res, next) => {
   const source = req.query.source;
   const destination = req.query.destination;
@@ -45,12 +45,61 @@ exports.getFlight = (req, res, next) => {
     })
     .catch((err) => {
       if (!err.statusCode) {
-        error.statusCode = 500;
+        err.statusCode = 500;
       }
       next(err);
     });
 };
 
+exports.bookFlight = (req, res, next) => {
+  const flightId = req.params.flightId;
+  const userId = req.userId;
+
+  User.findOne({ _id: userId })
+    .then((user) => {
+      if (!user) {
+        const error = new Error("No user found");
+        error.statusCode = 404;
+        throw error;
+      }
+      user.flights.push(flightId);
+      return user.save();
+    })
+    .then((result) => {
+      console.log(result);
+      res.status(200).json({ message: "Flight added succesfully" });
+    })
+    .catch((err) => {
+      if (!err.statusCode) {
+        err.statusCode = 500;
+      }
+      next(err);
+    });
+};
+
+exports.viewbookings = (req, res, next) => {
+  const userId = req.userId;
+
+  User.findOne({ _id: userId })
+    .then((user) => {
+      if (!user) {
+        const error = new Error("No user found");
+        error.statusCode = 404;
+        throw error;
+      }
+      res
+        .status(200)
+        .json({ message: "Fetched booked flights", flights: user.flights });
+    })
+    .catch((err) => {
+      if (!err.statusCode) {
+        err.statusCode = 500;
+      }
+      next(err);
+    });
+};
+
+// Authentication routes
 exports.signup = (req, res, next) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
@@ -71,6 +120,7 @@ exports.signup = (req, res, next) => {
         email: email,
         password: hashedPw,
         contact: contact,
+        flights: [],
       });
       return user.save();
     })
@@ -84,5 +134,43 @@ exports.signup = (req, res, next) => {
         err.statusCode = 500;
       }
       next(err);
+    });
+};
+
+exports.login = (req, res, next) => {
+  let loadedUser;
+  const email = req.body.email;
+  const password = req.body.password;
+
+  User.findOne({ email: email })
+    .then((user) => {
+      if (!user) {
+        const error = new Error("No user found");
+        error.statusCode = 404;
+        throw error;
+      }
+      loadedUser = user;
+      console.log(user);
+      return bcrypt.compare(password, user.password);
+    })
+    .then((isEqual) => {
+      if (!isEqual) {
+        const error = new Error("Wrong password!");
+        error.statusCode = 401;
+        throw error;
+      }
+
+      // generating token for the logged in user and attaching it
+      const token = jwt.sign(
+        {
+          email: loadedUser.email,
+          password: loadedUser.password,
+          userId: loadedUser._id,
+        },
+        "itlabrocks",
+        { expiresIn: "1h" }
+      );
+      // res.cookie('token', token, {httpOnly: true, maxAge: 3600000})
+      res.status(200).json({ token: token, userId: loadedUser._id.toString() });
     });
 };

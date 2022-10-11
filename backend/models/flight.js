@@ -14,10 +14,6 @@ const flightSchema = new Schema({
         type: String,
         required: true
     },
-    userId: {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-    }
 }, {timestamps: true})
 
 const Flight = mongoose.model('Flight', flightSchema)

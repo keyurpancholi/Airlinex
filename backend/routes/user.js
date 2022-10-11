@@ -3,11 +3,17 @@ const router = express.Router();
 const userController = require("../controller/user");
 const { body } = require("express-validator");
 const User = require("../models/user");
+const isAuth = require('../middleware/is-auth')
 
 // GET routes
-router.get("/getFlights", userController.getFlights);
+router.get("/getFlights", isAuth, userController.getFlights);
 
-router.get("/getFlight/:flightId", userController.getFlight);
+router.get("/getFlight/:flightId", isAuth, userController.getFlight);
+
+router.get('/viewbookings', isAuth, userController.viewbookings)
+
+// PUT routes
+router.put('/bookflight/:flightId', isAuth, userController.bookFlight)
 
 router.put("/signup", [
   body("username").trim().not().isEmpty(),
@@ -22,8 +28,9 @@ router.put("/signup", [
         }
       });
     }),
-]);
+], userController.signup);
 
 // POST routes
+router.post('/login', userController.login)
 
 module.exports = router;

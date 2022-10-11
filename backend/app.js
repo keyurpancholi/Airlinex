@@ -44,33 +44,8 @@ mongoose
   )
   .then((res) => {
     console.log("App connected succesfully");
-    User.findOne()
-      .then((user) => {
-        if (!user) {
-          const user = new User({
-            username: "Keyur",
-            email: "keyur.example@gmail.com",
-            contact: "7303675122",
-            bookings: {
-              flights: [],
-            },
-          });
-          user.save();
-          console.log("User created successfully");
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
     app.listen(8080);
   })
   .catch((err) => {
     console.log(err);
   });
-// const user = new User({
-//   username: 'Keyur',
-//   email: 'keyur.example@gmail.com',
-//   contact: '7303675122',
-//   bookings: {
-//     flights: []
-//   }
