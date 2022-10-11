@@ -1,4 +1,4 @@
-.featureLayout {
+/* .featureLayout {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -26,5 +26,13 @@
     background-color: #6E7491;
     border-radius: 30px;
     padding: 10px;
-    /* margin: 5px; */
+    /* margin: 5px; } */
+
+.cards{
+    padding:20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
+ 
+
