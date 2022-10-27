@@ -9,7 +9,7 @@ import ViewBookings from "./Pages/ViewBookings/ViewBookings"
 import Webcheckin from "./Pages/Webcheckin/Webcheckin";
 import Weather from "./Pages/Weather/weather";
 import { useState } from "react";
-import React from "react";
+
 function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState(false)

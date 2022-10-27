@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./BookNow.css";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Card from "../../Components/Card/Card";

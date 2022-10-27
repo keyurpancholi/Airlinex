@@ -6,7 +6,7 @@ import animation from "../../assets/lottie/homepage-animation.json";
 import Features from "./Features";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Footer from "../../Components/Footer/Footer"
-import React from "react";
+
 
 const HomePage = (props) => {
   const defaultOptions = {
