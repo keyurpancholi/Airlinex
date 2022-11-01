@@ -1,87 +1,104 @@
-// import "./ViewBookings.css";
-// import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-// import React from "react";
-
-
-// const ViewBookings = () => {
-//   return (
-//     <>
-//       <Navbar />
-//       <h1>View Bookings</h1>
-//       <Footer />
-//     </>
-//   );
-// };
-
-// export default ViewBookings;
-
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
+import { useTheme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import ButtonBase from '@mui/material/ButtonBase';
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "../../Components/Navbar/navbar";
-import Footer from "../../Components/Footer/Footer";
-
-const Img = styled('img')({
-  margin: 'auto',
-  display: 'block',
-  maxWidth: '100%',
-  maxHeight: '100%',
-});
+import Footer from "../../Components/Footer/Footer"
+import './ViewBookings.css';
+import Container from '@mui/material/Container';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Button from '@mui/material/Button';
+import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket';
+import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
+import FlightLandIcon from '@mui/icons-material/FlightLand';
+import { useNavigate } from 'react-router-dom';
 
 export default function ViewBookings() {
+
+  const theme = useTheme();
   return (
     <>
-     <Navbar />
-     <div className='bookings'>
-    <Paper
-      sx={{
-        p: 2,
-        margin: 'auto',
-        maxWidth: 800,
-        flexGrow: 1,
-        backgroundColor: (theme) =>
-          theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-      }}
+    <Navbar />
+    <br />
+    <Container>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+            onClick
+          >
+            <AirplaneTicketIcon />
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Flight ticket
+          </Typography>
+          <Button color="inherit" sx={{fontWeight:'bold'}}>Booking</Button>
+        </Toolbar>
+      </AppBar>
+    </Box>
+    <Card sx={{ display: 'flex',justifyContent:'space-evenly'}}
+    fullwidth
+    elevation={5}
     >
-      <Grid container spacing={2}>
-        <Grid item>
-          <ButtonBase sx={{ width: 128, height: 128 }}>
-            <Img alt="complex" src="https://cdn3d.iconscout.com/3d/premium/thumb/flight-ticket-5370540-4492077.png" />
-          </ButtonBase>
-        </Grid>
-        <Grid item xs={12} sm container>
-          <Grid item xs container direction="column" spacing={2}>
-            <Grid item xs>
-              <Typography gutterBottom variant="subtitle1" component="div">
-                Standard license
-              </Typography>
-              <Typography variant="body2" gutterBottom>
-                Full resolution 1920x1080 • JPEG
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                ID: 1030114
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography sx={{ cursor: 'pointer' }} variant="body2">
-                Remove
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid item>
-            <Typography variant="subtitle1" component="div">
-              $19.00
-            </Typography>
-          </Grid>
-        </Grid>
-      </Grid>
-    </Paper>
-    </div>
+   
+    <CardMedia
+        component="img"
+        sx={{ width: 151 }}
+        image="https://static.vecteezy.com/system/resources/previews/009/671/638/original/air-ticket-specify-flight-details-and-travel-time-for-traveling-with-airlines-vector.jpg"
+        alt="flight booking"
+      />
+      <Box sx={{ display: 'flex', flexDirection: 'flex-end',justifyContent:'center',alignItems:'center'}}>
+        <CardContent sx={{ flex: '1 0 auto' }}>
+          <Typography component="div" variant="h5"
+          sx={{fontFamily:'inherit'}}>
+            Flight Number
+          </Typography>
+          
+          <Typography variant="subtitle1" color="text.secondary" component="div"
+           sx={{fontFamily:'inherit',fontWeight:'bold',flexGrow:1}}>
+             <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+             <FlightTakeoffIcon/>
+          </IconButton>
+            Source: Dubai
+          </Typography>
+          <Typography variant="subtitle1" color="text.secondary" component="div"
+           sx={{fontFamily:'inherit',fontWeight:'bold'}}>
+              <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+             <FlightLandIcon/>
+          </IconButton>
+            Destination: Mumbai
+          </Typography>
+        </CardContent>
+       
+      </Box>
+    </Card>
+    </Container>
+    <br />
     <Footer />
     </>
     
-  )
+  );
 }
