@@ -1,5 +1,6 @@
 import "./FlightCard.css";
 import Card from "../Card/Card";
+import React from "react";
 
 const FlightCard = (props) => {
   return (

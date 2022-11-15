@@ -4,19 +4,20 @@ import Navbar from "../../Components/Navbar/navbar";
 import Footer from "../../Components/Footer/Footer";
 import FlightCard from "../../Components/FlightCard/FlightCard";
 import { Link } from "react-router-dom";
+import React from "react";
 
 const ViewBookings = () => {
   const dummydata = [
-    // {
-    //   flightNumber: "AIC-804",
-    //   source: "BLR",
-    //   destination: "DEL",
-    // },
-    // {
-    //   flightNumber: "6E-911",
-    //   source: "MUM",
-    //   destination: "GOA",
-    // },
+    {
+      flightNumber: "AIC-804",
+      source: "BLR",
+      destination: "DEL",
+    },
+    {
+      flightNumber: "6E-911",
+      source: "MUM",
+      destination: "GOA",
+    },
   ];
   return (
     <>

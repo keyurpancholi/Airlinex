@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import {
 	Box,
 	Container,
@@ -17,30 +17,31 @@ const Footer = () => {
 						<Heading>About Us</Heading>
 						<FooterLink href="#">Airlinex Green</FooterLink>
 						<FooterLink href="#">Board of Directors</FooterLink>
+						<FooterLink href="#">Careers</FooterLink>
 						<FooterLink href="#">Leadership Team</FooterLink>
-						<FooterLink href="#">Investor Relations</FooterLink>
+						{/* <FooterLink href="#">Investor Relations</FooterLink> */}
 						<FooterLink href="#">Press Releases</FooterLink>
-						<FooterLink href="#">Transgender Persons Policy</FooterLink>
+						{/* <FooterLink href="#">Transgender Persons Policy</FooterLink> */}
 						<FooterLink href="#">Our Awards</FooterLink>
 					</Column>
 					<Column>
 						<Heading>Services</Heading>
-						<FooterLink href="#">Special Disability Assistance</FooterLink>
+						{/* <FooterLink href="#">Special Disability Assistance</FooterLink> */}
 						<FooterLink href="#">Medical Assistance</FooterLink>
 						<FooterLink href="#">Seat Select</FooterLink>
 						<FooterLink href="#">Gift Voucher</FooterLink>
-						<FooterLink href="#">6E Tiffin</FooterLink>
+						{/* <FooterLink href="#">6E Tiffin</FooterLink> */}
 						<FooterLink href="#">Add-ons & Services</FooterLink>
 						<FooterLink href="#">Baggage</FooterLink>
 					</Column>
 					<Column>
 						<Heading>Quick Links</Heading>
 						<FooterLink href="#">Offers</FooterLink>
-						<FooterLink href="#">Careers</FooterLink>
+						
 						<FooterLink href="#">Advertise with us</FooterLink>
 						<FooterLink href="#">Destinations</FooterLink>
 						<FooterLink href="#">Terms and Conditions</FooterLink>
-						<FooterLink href="#">Conditions of Carriage</FooterLink>
+						{/* <FooterLink href="#">Conditions of Carriage</FooterLink> */}
 						<FooterLink href="#">Privacy Policy</FooterLink>
 						<FooterLink href="#">Disclaimer</FooterLink>
 						<FooterLink href="#">International Travel Tips</FooterLink>

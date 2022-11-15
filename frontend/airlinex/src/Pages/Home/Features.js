@@ -1,5 +1,7 @@
+import React from "react";
 import "./Features.css";
 import Card from "../../Components/Card/Card";
+
 
 const Features = () => {
   return (

@@ -1,4 +1,6 @@
+import React from "react";
 import "./Dropdown.css";
+
 
 const Dropdown = (props) => {
   window.onclick = function (event) {

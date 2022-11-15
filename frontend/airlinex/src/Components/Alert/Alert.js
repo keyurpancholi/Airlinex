@@ -2,6 +2,7 @@ import "./Alert.css";
 import Card from "../Card/Card";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../../../node_modules/bootstrap/dist/js/bootstrap.min.js";
+import React from "react";
 
 const Alert = (props) => {
   return (
