@@ -50,11 +50,6 @@ const Navbar = (props) => {
                 </Link>
               </li>
               <li className="nav-item px-1">
-                <Link className="nav-link" to="/webcheckin">
-                  Web Checkin
-                </Link>
-              </li>
-              <li className="nav-item px-1">
                 <Link className="nav-link" to="/weather">
                   Weather
                 </Link>
@@ -83,7 +78,7 @@ const Navbar = (props) => {
                 </Link>
               </li>
               <li className="nav-item px-1">
-                <Link className="nav-link" to="/">
+                <Link className="nav-link" to="/contact">
                   Contact
                 </Link>
               </li>

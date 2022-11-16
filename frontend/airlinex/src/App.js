@@ -7,6 +7,7 @@ import BookNow from "./Pages/BookNow/BookNow";
 import ViewBookings from "./Pages/ViewBookings/ViewBookings"
 import Webcheckin from "./Pages/Webcheckin/Webcheckin";
 import Weather from "./Pages/Weather/weather";
+import Contact from "./Pages/Contact/ContactUs"
 import { useState } from "react";
 import React from "react";
 function App() {
@@ -33,6 +34,7 @@ function App() {
       <Route path="/viewbookings" element={<ViewBookings isLoggedIn={isAuthenticated} setIsLoggedIn={loginHandler} setIsLoggedOut={logoutHandler}  />} />
       <Route path="/webcheckin" element={<Webcheckin isLoggedIn={isAuthenticated} setIsLoggedIn={loginHandler} setIsLoggedOut={logoutHandler} />} />
       <Route path="/weather" element={<Weather isLoggedIn={isAuthenticated} setIsLoggedIn={loginHandler} setIsLoggedOut={logoutHandler} />} />
+      <Route path="/contact" element={<Contact isLoggedIn={isAuthenticated} setIsLoggedIn={loginHandler} setIsLoggedOut={logoutHandler} />} />
     </Routes>
   );
 }

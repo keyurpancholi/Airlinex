@@ -80,7 +80,7 @@ exports.bookFlight = (req, res, next) => {
 exports.viewbookings = (req, res, next) => {
   const userId = req.userId;
 
-  User.findOne({ _id: userId })
+  User.findOne({ _id: userId }).populate('flights')
     .then((user) => {
       if (!user) {
         const error = new Error("No user found");
