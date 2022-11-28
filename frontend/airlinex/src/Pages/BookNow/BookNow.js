@@ -8,16 +8,23 @@ import Footer from "../../Components/Footer/Footer";
 import React,{ useState } from "react";
 
 const BookNow = (props) => {
-  const fromOptions = ["Mumbai", "Delhi", "New York", "Boston", "Dubai"];
-  const toOptions = ["Andheri", "Delhi", "New York", "Boston", "DEL"];
+  const fromOptions = ["New Delhi", "Mumbai", "Dubai", "Madrid", "London", "Kuala Lumpur", "Moskow" ];
+  const toOptions = ["Los Angeles", "Singapore", "London", "Bangkok", "Stockholm", "Glasgow", "Beijing", "Larnaka"];
 
   const [isLoading, setIsLoading] = useState(false);
   const [isFlights, setIsFlights] = useState([]);
+  const [flightType, setFlightType] = useState("");
+  const [flightSource, setFlightSource] = useState("");
+  const [flightDestination, setFlightDestination] = useState("");
+  const [departDate, setDepartDate] = useState("");
+  const [arriveDate, setArriveDate] = useState("");
+  //TODO: Add time in form
 
   const searchFlightsHandler = () => {
     setIsLoading(true);
     // hardcoded the query params for now, to be changed later
-    fetch("http://localhost:8080/getFlights?source=Dubai&destination=DEL", {
+    console.log(flightSource, flightDestination)
+    fetch(`http://localhost:8080/getFlights?source=New Delhi&destination=Los Angeles`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
         "Content-Type": "application/json",
@@ -25,6 +32,7 @@ const BookNow = (props) => {
       },
     })
       .then((res) => {
+        console.log(flightType, flightSource, flightDestination);
         return res.json();
       })
       .then((data) => {
@@ -70,7 +78,7 @@ const BookNow = (props) => {
         <Card>
           <div className="tripInputPrim">
             <div>
-              <input type="radio" name="trip_type" id="one-way-trip"></input>
+              <input type="radio" name="trip_type" id="one-way-trip" onChange={(e) => setFlightType(e)}></input>
               <label htmlFor="one-way-trip">One-way-trip</label>
             </div>
             <div className="spacer"></div>
@@ -84,7 +92,7 @@ const BookNow = (props) => {
             <div className="tripInputRow">
               <div className="tripInputIntermediate">
                 <div className="tripInputCol">
-                  <div className="tripInputLabelRow">
+                  <div className="tripInputLabelRow">   
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 640 512"
@@ -95,7 +103,7 @@ const BookNow = (props) => {
                       From
                     </label>
                   </div>
-                  <Dropdown id="myFromDropdown" options={fromOptions}>
+                  <Dropdown id="myFromDropdown" options={fromOptions} value={flightSource} onChange={(e) => setFlightSource(e)}>
                     Choose source
                   </Dropdown>
                 </div>
@@ -109,7 +117,7 @@ const BookNow = (props) => {
                     </svg>
                     <label for="myToDropdown">To</label>
                   </div>
-                  <Dropdown id="myToDropdown" options={toOptions}>
+                  <Dropdown id="myToDropdown" options={toOptions} value={flightDestination} onChange={(e) => setFlightDestination(e)}>
                     Choose destination
                   </Dropdown>
                 </div>
@@ -124,7 +132,7 @@ const BookNow = (props) => {
                     </svg>
                     <label for="departDate">Depart</label>
                   </div>
-                  <input type="date" id="departDate"></input>
+                  <input type="date" id="departDate" onChange={(e) => setDepartDate(e)}></input>
                 </div>
                 <div className="tripInputCol">
                   <div className="tripInputLabelRow">
@@ -136,7 +144,7 @@ const BookNow = (props) => {
                     </svg>
                     <label for="arriveDate">Arrive</label>
                   </div>
-                  <input type="date" id="arriveDate"></input>
+                  <input type="date" id="arriveDate" onChange={(e) => setArriveDate(e)}></input>
                 </div>
               </div>
               <div className="searchIcon">
